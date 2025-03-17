@@ -1,0 +1,1 @@
+[link](https://practice.geeksforgeeks.org/contest/gfg-weekly-187-rated-contest)
