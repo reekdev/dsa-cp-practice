@@ -8,8 +8,8 @@ public class LinkedList {
     /**
      * This class is an implementation detail. It does not need to exist outside this class.
      */
-    private class Node {
-        private int value;
+    private static class Node {
+        private final int value;
         private Node next;
 
         public Node(int value) {
@@ -57,6 +57,10 @@ public class LinkedList {
         return indexOf(item) != -1;
     }
 
+    private boolean isEmpty() {
+        return head == null;
+    }
+
     public void removeFirst() {
         if (isEmpty())
             throw new NoSuchElementException();
@@ -71,10 +75,6 @@ public class LinkedList {
         var second = head.next;
         head.next = null;
         head = second;
-    }
-
-    private boolean isEmpty() {
-        return head == null;
     }
 
     @Override
